@@ -6,7 +6,7 @@ use warnings;
 use base 'CGI::Untaint::object';
 
 use vars qw/$VERSION/;
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub _untaint_re { 
 
@@ -23,7 +23,7 @@ CGI::Untaint::zipcode - validate a US zipcode
   use CGI::Untaint;
   my $handler = CGI::Untaint->new($q->Vars);
 
-  my $url = $handler->extract( -as_zipcode => 'zip' );
+  my $zipcode = $handler->extract( -as_zipcode => 'zip' );
 
 =head1 DESCRIPTION
 
